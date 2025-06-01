@@ -39,9 +39,6 @@
   }
 }
 
-// ===================================
-// pages/_app.js - Main App Component
-// ===================================
 import '../styles/globals.css';
 import { Toaster } from 'react-hot-toast';
 import { SWRConfig } from 'swr';
@@ -88,9 +85,6 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp;
 
-// ===================================
-// pages/index.js - Landing Page
-// ===================================
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -195,9 +189,6 @@ function FeatureCard({ icon: Icon, title, description }) {
   );
 }
 
-// ===================================
-// pages/dashboard/index.js - Main Dashboard
-// ===================================
 import { useAuth } from '../../contexts/AuthContext';
 import AgentDashboard from '../../components/dashboards/AgentDashboard';
 import ProviderDashboard from '../../components/dashboards/ProviderDashboard';
@@ -219,9 +210,6 @@ export default function Dashboard() {
   );
 }
 
-// ===================================
-// components/dashboards/AgentDashboard.js
-// ===================================
 import { useState } from 'react';
 import useSWR from 'swr';
 import { motion } from 'framer-motion';
@@ -306,9 +294,6 @@ export default function AgentDashboard() {
   );
 }
 
-// ===================================
-// components/dashboards/ProviderDashboard.js
-// ===================================
 import { useState } from 'react';
 import useSWR from 'swr';
 import { motion } from 'framer-motion';
@@ -404,9 +389,6 @@ export default function ProviderDashboard() {
   );
 }
 
-// ===================================
-// components/payment/PaymentSetup.js - Seamless Payment Onboarding
-// ===================================
 import { useState } from 'react';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import { motion } from 'framer-motion';
@@ -530,9 +512,6 @@ export default function PaymentSetup({ onComplete }) {
   );
 }
 
-// ===================================
-// components/payment/SubscriptionUpgrade.js - Smooth Upgrade Flow
-// ===================================
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Star, Zap, Crown } from 'lucide-react';
@@ -695,9 +674,7 @@ export default function SubscriptionUpgrade({ currentTier, role }) {
   );
 }
 
-// ===================================
-// components/payment/LeadAcceptance.js - One-Click Lead Accept
-// ===================================
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, MapPin, DollarSign, User, CheckCircle } from 'lucide-react';
@@ -841,9 +818,6 @@ export default function LeadAcceptance({ lead, onAccept, subscription }) {
   );
 }
 
-// ===================================
-// components/modals/CreateLeadModal.js - Quick Lead Creation
-// ===================================
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -1160,9 +1134,7 @@ export default function CreateLeadModal({ onClose, onSuccess }) {
   );
 }
 
-// ===================================
-// contexts/AuthContext.js - Authentication Context
-// ===================================
+
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
@@ -1260,9 +1232,6 @@ export function AuthProvider({ children }) {
   );
 }
 
-// ===================================
-// styles/globals.css - Global Styles
-// ===================================
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

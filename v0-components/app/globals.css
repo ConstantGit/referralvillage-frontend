@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Almost Black */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%; /* Almost Black */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%; /* Almost Black */
+    --primary: 262.1 83.3% 57.8%; /* Main purple */
+    --primary-foreground: 210 40% 98%; /* Near White */
+    --primary-hover: 262.1 80% 52.8%; /* Darker purple for hover */
+    --primary-focus-ring: 262.1 83.3% 62.8%; /* Lighter for focus ring */
+    --secondary: 210 40% 96.1%; /* Light Gray */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
+    --muted: 210 40% 96.1%; /* Light Gray */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Mid Gray */
+    --accent: 210 40% 96.1%; /* Light Gray */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
+    --destructive: 0 70% 50%; /* Red */
+    --destructive-foreground: 210 40% 98%; /* Near White */
+    --border: 214.3 31.8% 91.4%; /* Light Gray Border */
+    --input: 214.3 31.8% 91.4%; /* Light Gray Input BG */
+    --ring: var(--primary-focus-ring); /* Purple focus ring */
+    --radius: 0.5rem;
+
+    --font-sans: "Inter", sans-serif;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Almost Black */
+    --foreground: 210 40% 98%; /* Near White */
+    --card: 222.2 84% 4.9%; /* Almost Black */
+    --card-foreground: 210 40% 98%; /* Near White */
+    --popover: 222.2 84% 4.9%; /* Almost Black */
+    --popover-foreground: 210 40% 98%; /* Near White */
+    --primary: 262.1 83.3% 57.8%; /* Main purple (can remain same or adjust) */
+    --primary-foreground: 210 40% 98%; /* Near White */
+    --primary-hover: 262.1 75% 52.8%; /* Slightly adjusted hover for dark */
+    --primary-focus-ring: 262.1 83.3% 62.8%;
+    --secondary: 222.2 47.4% 11.2%; /* Dark Blue */
+    --secondary-foreground: 210 40% 98%; /* Near White */
+    --muted: 222.2 47.4% 11.2%; /* Dark Blue */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter Gray for dark */
+    --accent: 222.2 47.4% 11.2%; /* Dark Blue */
+    --accent-foreground: 210 40% 98%; /* Near White */
+    --destructive: 0 62.8% 30.6%; /* Darker Red */
+    --destructive-foreground: 0 85.7% 97.3%; /* Lighter Pink */
+    --border: 215 20.2% 25%; /* Darker Gray Border (was 30%) */
+    --input: 215 20.2% 25%; /* Darker Gray Input BG (was 30%) */
+    --ring: var(--primary-focus-ring);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  .text-heading-2xl {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+  .text-heading-xl {
+    @apply text-xl font-semibold tracking-tight sm:text-2xl;
+  }
+  .text-heading-lg {
+    @apply text-lg font-semibold tracking-tight sm:text-xl;
+  }
+  .text-heading-md {
+    @apply text-base font-medium sm:text-lg;
+  }
+  .text-body-lg {
+    @apply text-sm sm:text-base;
+  }
+  .text-body-md {
+    @apply text-sm;
+  }
+  .text-body-sm {
+    @apply text-xs;
+  }
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary-hover {
+    @apply hover:bg-primary-hover;
+  }
+  .btn-disabled {
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .input-compact {
+    @apply py-1.5 px-2.5 text-sm;
+  }
+  .btn-compact {
+    @apply py-1.5 px-3 text-sm;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%);
+}
